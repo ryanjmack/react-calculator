@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Screen from '../Screen/Screen';
 
 
 class App extends React.Component {
@@ -7,6 +8,7 @@ class App extends React.Component {
     super(props);
 
     this.state = {
+      // mock expression for layout purposes
       expression: ['1', '*', '2', '*', '(', '5.2', '+', '1', ')'],
     }
   }
@@ -14,7 +16,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <p>{this.state.expression}</p>
+        <Screen display={this.state.expression.join("")} />
       </div>
     )
   }
