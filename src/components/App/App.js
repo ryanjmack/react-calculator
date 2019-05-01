@@ -3,10 +3,18 @@ import './App.css';
 
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      expression: ['1', '*', '2', '*', '(', '5.2', '+', '1', ')'],
+    }
+  }
+
   render() {
     return (
       <div className="App">
-        <h1>Hello world!</h1>
+        <p>{this.state.expression}</p>
       </div>
     )
   }
